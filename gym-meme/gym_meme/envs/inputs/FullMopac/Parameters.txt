@@ -1,0 +1,10 @@
+networkName	NewMopac
+Simulation_time(seconds)	10800
+simulation_update_Step(seconds)	6
+toll_update_step(seconds)	300
+demand_factor	1.00
+min_speed_limit_ML(mph)	50
+lane_choice_routes(binary/DR)	binary
+lane_choice_stochastic	false
+stddev_demand	10
+

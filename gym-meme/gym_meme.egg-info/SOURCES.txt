@@ -1,0 +1,6 @@
+setup.py
+gym_meme.egg-info/PKG-INFO
+gym_meme.egg-info/SOURCES.txt
+gym_meme.egg-info/dependency_links.txt
+gym_meme.egg-info/requires.txt
+gym_meme.egg-info/top_level.txt

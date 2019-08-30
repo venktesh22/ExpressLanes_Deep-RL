@@ -1,0 +1,5 @@
+OriginNode	DestNode	StartTime(sec)	EndTime(sec)	Demand(veh/hr)
+1	8	0	1800	6600
+1	8	1800	3600	8050
+1	8	3600	5400	7800
+1	8	5400	7200	500

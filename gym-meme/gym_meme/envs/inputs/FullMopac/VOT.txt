@@ -1,0 +1,6 @@
+VOTClasses($/hr)	DemandProportion
+10	0.1
+15	0.4
+20	0.2
+25	0.2
+30	0.1

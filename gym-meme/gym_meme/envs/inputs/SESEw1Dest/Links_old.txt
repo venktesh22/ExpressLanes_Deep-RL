@@ -1,0 +1,8 @@
+FromNode	ToNode	Length(km)	Capacity(vph)	JamDensity(veh/km)	FreeFlowSpeed(km/hr)	BackWaveSpeed(km/hr)	Class	InitialVehNo
+1	2	0.3	8800	660	90	30	INLINK	0
+2	3	0.15	2200	165	90	30	ONRAMP	0
+2	5	5.1	6600	495	90	30	GP	0
+3	4	5.1	2200	165	90	30	HOT	0
+4	6	0.15	2200	165	90	30	OFFRAMP	0
+5	6	0.3	4400	330	90	30	GP	0
+6	7	0.3	6600	495	90	30	OUTLINK	0

@@ -1,0 +1,10 @@
+networkName	SESE
+Simulation_time(seconds)	7200
+simulation_update_Step(Seconds)	6
+toll_update_step	60
+demand_factor	1.0
+min_speed_limit_ML(km/hr)	80
+lane_choice_routes(binary/DR)	binary
+lane_choice_stochastic	false
+stddev_demand(veh/hr)	10
+
