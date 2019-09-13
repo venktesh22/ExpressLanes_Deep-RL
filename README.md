@@ -1,5 +1,7 @@
 This project contains the Python 3 code for a deep reinforcement learning (Deep-RL) model for dynamic pricing of express lanes with multiple access locations. It contains a new reinforcement learning (RL) environment for macroscopic simulation of traffic (which we call `gym-meme`) similar to the current RL `gym` environments, and customizes the open-source implementation of VPG and PPO algorithms provided by OpenAI SpinningUp [OpenAI SpinningUp](https://github.com/openai/spinningup) to work with the new environment.
 
+More details available on the paper: https://arxiv.org/abs/1909.04760
+
 # Instructions for download
 Clone the project or download the zip. The folder structure is similar to the structure provided by OpenAI SpinningUp [OpenAI SpinningUp](https://github.com/openai/spinningup), excluding the files which are not relevant for reproducing the results. The .zip file contains following folders:
 
