@@ -1,5 +1,5 @@
 networkName	NewMopac
-Simulation_time(seconds)	10800
+Simulation_time(seconds)	12000
 simulation_update_Step(seconds)	6
 toll_update_step(seconds)	300
 demand_factor	1.00

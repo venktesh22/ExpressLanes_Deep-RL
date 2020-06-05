@@ -9,7 +9,7 @@ import tensorflow as tf
 import pandas as pd
 
 import matplotlib
-matplotlib.use('PS')
+matplotlib.use('PS') # generate postscript output by default
 import matplotlib.pyplot as plt
 
 import gym
@@ -169,6 +169,7 @@ def vpg(env_fn, actor_critic=core.mlp_actor_critic, ac_kwargs=dict(), seed=0,
     logger.save_config(locals())
 
     seed += 10000 * proc_id()
+#    tf.compat.v1.random.set_random_seed(seed)
     tf.set_random_seed(seed)
     np.random.seed(seed)
 
@@ -291,8 +292,8 @@ def vpg(env_fn, actor_critic=core.mlp_actor_critic, ac_kwargs=dict(), seed=0,
                     logger.store(EpRet=ep_ret, EpLen=ep_len)
                     #get other stats and store them too
                     otherStats = env.getAllOtherStats()
-                    if np.any(np.isnan(np.array(otherStats))):
-                        sys.exit("Nan found in statistics! Error")
+#                    if np.any(np.isnan(np.array(otherStats))):
+#                        sys.exit("Nan found in statistics! Error")
                     logger.store(EpTSTT=otherStats[0], EpRevenue=otherStats[1], 
                                  EpThroughput=otherStats[2], EpJAH=otherStats[3],
                                  EpRemVeh=otherStats[4], EpJAH2= otherStats[5],
@@ -428,7 +429,7 @@ if __name__ == '__main__':
     from spinup.utils.run_utils import setup_logger_kwargs
     import time
     currTime = round(time.time())
-    logger_kwargs = setup_logger_kwargs(args.exp_name, str(args.seed)+"_e"+str(args.epochs)+"_"+args.objective+"_"+str(currTime)+"_VPG")
+    logger_kwargs = setup_logger_kwargs(args.exp_name, str(args.seed)+"_e"+str(args.epochs)+"_st"+str(args.steps)+"_"+args.objective+"_"+str(currTime)+"_VPG")
 
     vpg(lambda : gym.make(args.env, netname=args.exp_name, objective=args.objective, seed=args.seed, jahThresh= args.jahThresh), actor_critic=core.mlp_actor_critic,
         ac_kwargs=dict(hidden_sizes=[args.hid]*args.l), gamma=args.gamma, pi_lr= args.pi_lr,

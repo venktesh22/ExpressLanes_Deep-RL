@@ -302,8 +302,8 @@ def ppo(env_fn, actor_critic=core.mlp_actor_critic, ac_kwargs=dict(), seed=0,
                     logger.store(EpRet=ep_ret, EpLen=ep_len)
                     #get other stats and store them too
                     otherStats = env.getAllOtherStats()
-                    if np.any(np.isnan(np.array(otherStats))):
-                        sys.exit("Nan found in statistics! Error")
+#                    if np.any(np.isnan(np.array(otherStats))):
+#                        sys.exit("Nan found in statistics! Error")
                     logger.store(EpTSTT=otherStats[0], EpRevenue=otherStats[1], 
                                  EpThroughput=otherStats[2], EpJAH=otherStats[3],
                                  EpRemVeh=otherStats[4], EpJAH2= otherStats[5],
